@@ -1,4 +1,4 @@
-# Bismit Assignment BE
+# Bismit Assignment FE
 
 This repository contains the backend code for the Bismit assignment. To set up and run the project, follow these steps:
 
