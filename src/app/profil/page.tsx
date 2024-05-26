@@ -23,7 +23,9 @@ const EditProfile = () => {
 
             const response = await fetch(`http://localhost:8000/user/${id}`, {
                 method: "PUT",
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json',
+                    'authorization': id
+                 },
                 body: JSON.stringify({
                     fullname,
                     phonenumber

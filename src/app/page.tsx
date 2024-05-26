@@ -44,24 +44,37 @@ export default function Home() {
   };
 
   const handleDeleteAccount = async () => {
-    if (id) {
-      try {
-        const response = await fetch(`http://localhost:8000/user/${id}`, {
-          method: 'DELETE',
-        });
+    try {
+        const userCookie = getCookie('user');
 
-        if (response.ok) {
-          console.log('Account deleted');
-          deleteCookie("user");
-          route.push('/login');
-        } else {
-          console.error('Failed to delete account');
+        if (!userCookie) {
+            throw new Error('User ID not found in cookies');
         }
-      } catch (error) {
+
+        const parsedUser = JSON.parse(userCookie.toString());
+        const id = parsedUser.user.id;
+
+        if (id) {
+            const response = await fetch(`http://localhost:8000/user/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'authorization': id
+                },
+            });
+
+            if (response.ok) {
+                console.log('Account deleted');
+                deleteCookie("user");
+                route.push('/login');
+            } else {
+                console.error('Failed to delete account');
+            }
+        }
+    } catch (error) {
         console.error(error);
-      }
     }
-  };
+};
+
   
   const handleLogout = () => {
     deleteCookie("user");
