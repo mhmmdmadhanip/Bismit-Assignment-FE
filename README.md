@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bismit Assignment BE
 
-## Getting Started
+This repository contains the backend code for the Bismit assignment. To set up and run the project, follow these steps:
 
-First, run the development server:
+1. **Clone the Repository**: Clone the repository to your local machine using the following commands:
+   ```bash
+   git clone https://github.com/mhmmdmadhanip/Bismit-Assignment-BE.git project
+   cd project
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies:
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Configure Environment Variables**: Create a `.env` file in the root directory of the project and add the following content:
+   ```env
+   DATABASE_URL="postgresql://postgres:JUiiAFeoPpVwYHkyMemABqxMBCZtEbhz@monorail.proxy.rlwy.net:22186/railway"
+   ```
+   This `DATABASE_URL` is necessary for connecting to the PostgreSQL database.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Start the Application**: Run the following command to start the application:
+   ```bash
+   npm run start
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can access the frontend application via this link: [Bismit Assignment Frontend](https://bismit-assignment-fe.vercel.app/).
 
-## Learn More
+## Additional Information
 
-To learn more about Next.js, take a look at the following resources:
+- Ensure that the `DATABASE_URL` is correctly set in your `.env` file, as it is crucial for connecting to the PostgreSQL database.
+- You can use the `.env.example` file as a template for your environment variables.
+- If you encounter any issues, verify that your `.env` file is in the root directory and correctly formatted, ensure that the PostgreSQL database is accessible and the URL is correct, and check the console for any error messages.
+- For further assistance, feel free to open an issue in the repository.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Happy coding!
