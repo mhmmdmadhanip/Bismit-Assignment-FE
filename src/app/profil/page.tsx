@@ -21,7 +21,6 @@ const EditProfile = () => {
             const parsedUser = JSON.parse(userCookie.toString());
             const id = parsedUser.user.id;
 
-
             const response = await fetch(`http://localhost:8000/user/${id}`, {
                 method: "PUT",
                 headers: { 'Content-Type': 'application/json' },
@@ -85,9 +84,17 @@ const EditProfile = () => {
 
                 <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition-colors duration-300"
+                    className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 mb-4"
                 >
                     Edit Profile
+                </button>
+
+                <button
+                    type="button"
+                    className="w-full bg-gray-500 text-white p-3 rounded-lg hover:bg-gray-600 transition-colors duration-300"
+                    onClick={() => router.push('/')}
+                >
+                    Back
                 </button>
             </form>
         </div>
