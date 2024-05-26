@@ -24,6 +24,7 @@ export default function Home() {
       const userCookie = getCookie('user');
       
       if (!userCookie) {
+        route.push('/login');
         throw new Error('User ID not found in cookies');
       }
 
