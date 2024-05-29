@@ -55,7 +55,7 @@ export default function Home() {
         const id = parsedUser.user.id;
 
         if (id) {
-            const response = await fetch(`http://localhost:8000/user/${id}`, {
+            const response = await fetch(`https://bismit-assignment-1enz3ya69-muhammad-madhani-putras-projects.vercel.app/user/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'authorization': id
