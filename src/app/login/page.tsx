@@ -13,7 +13,7 @@ const LoginPage = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch('https://bismit-assignment-1enz3ya69-muhammad-madhani-putras-projects.vercel.app/user/login', {
+            const response = await fetch('https://bismit-assignment.vercel.app/user/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),

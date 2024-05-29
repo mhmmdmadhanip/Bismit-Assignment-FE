@@ -13,7 +13,7 @@ const RegisterPage = () => {
     const create = async (e: SyntheticEvent) => {
         e.preventDefault();
 
-        await fetch('https://bismit-assignment-1enz3ya69-muhammad-madhani-putras-projects.vercel.app/user/register', {
+        await fetch('https://bismit-assignment.vercel.app/user/register', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

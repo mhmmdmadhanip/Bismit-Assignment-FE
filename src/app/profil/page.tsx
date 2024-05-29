@@ -21,7 +21,7 @@ const EditProfile = () => {
             const parsedUser = JSON.parse(userCookie.toString());
             const id = parsedUser.user.id;
 
-            const response = await fetch(`https://bismit-assignment-1enz3ya69-muhammad-madhani-putras-projects.vercel.app/user/${id}`, {
+            const response = await fetch(`https://bismit-assignment.vercel.app/user/${id}`, {
                 method: "PUT",
                 headers: { 'Content-Type': 'application/json',
                     'authorization': id
